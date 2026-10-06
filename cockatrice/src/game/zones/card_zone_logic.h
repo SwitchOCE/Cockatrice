@@ -21,7 +21,7 @@ class CardItem;
 inline Q_LOGGING_CATEGORY(CardZoneLogicLog, "card_zone_logic");
 
 class PlayerLogic;
-class ZoneViewZone;
+class ZoneViewZoneLogic;
 
 class CardZoneLogic : public QObject
 {
@@ -79,7 +79,7 @@ public:
     {
         return cards.getContentsKnown();
     }
-    QList<ZoneViewZone *> &getViews()
+    QList<ZoneViewZoneLogic *> &getViews()
     {
         return views;
     }
@@ -111,7 +111,7 @@ protected:
     PlayerLogic *player;
     QString name;
     CardList cards;
-    QList<ZoneViewZone *> views;
+    QList<ZoneViewZoneLogic *> views;
     bool hasCardAttr;
     bool isShufflable;
     bool alwaysRevealTopCard;
