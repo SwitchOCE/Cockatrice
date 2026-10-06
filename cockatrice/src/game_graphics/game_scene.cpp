@@ -2,7 +2,6 @@
 
 #include "../client/settings/cache_settings.h"
 #include "../game/abstract_game.h"
-#include "../game/arrow_registry.h"
 #include "../game/board/arrow_data.h"
 #include "../game/player/player_actions.h"
 #include "../game/player/player_event_handler.h"

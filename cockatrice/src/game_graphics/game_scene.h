@@ -1,7 +1,7 @@
 #ifndef GAMESCENE_H
 #define GAMESCENE_H
 
-#include "../game/arrow_registry.h"
+#include "board/arrow_registry.h"
 
 #include <QGraphicsScene>
 #include <QHash>
