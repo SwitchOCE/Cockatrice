@@ -1,8 +1,6 @@
 #ifndef COCKATRICE_DECK_STATE_MANAGER_H
 #define COCKATRICE_DECK_STATE_MANAGER_H
 
-#include "../../deck_loader/loaded_deck.h"
-
 #include <QModelIndex>
 #include <QObject>
 #include <QSharedPointer>
@@ -10,6 +8,7 @@
 #include <QStringList>
 #include <functional>
 #include <libcockatrice/deck_list/deck_list.h>
+#include <libcockatrice/deck_list/loaded_deck.h>
 #include <qtmetamacros.h>
 
 class DeckListHistoryManager;

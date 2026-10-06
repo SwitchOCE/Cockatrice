@@ -7,13 +7,12 @@
 #ifndef DECK_LOADER_H
 #define DECK_LOADER_H
 
-#include "deck_file_format.h"
-#include "loaded_deck.h"
-
 #include <QLoggingCategory>
 #include <QObject>
 #include <QString>
 #include <QStringList>
+#include <libcockatrice/deck_list/deck_file_format.h>
+#include <libcockatrice/deck_list/loaded_deck.h>
 #include <optional>
 #include <qtmetamacros.h>
 
