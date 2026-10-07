@@ -7,7 +7,6 @@
 #ifndef ABSTRACTCARDITEM_H
 #define ABSTRACTCARDITEM_H
 
-#include "../../game/board/card_state.h"
 #include "../animated_item.h"
 #include "arrow_target.h"
 #include "graphics_item_type.h"
@@ -17,6 +16,7 @@
 #include <QSizeF>
 #include <QString>
 #include <QtGlobal>
+#include <libcockatrice/game/board/card_state.h>
 #include <qtmetamacros.h>
 
 class PlayerLogic;

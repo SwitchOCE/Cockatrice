@@ -1,8 +1,7 @@
 #include "view_zone_logic.h"
 
-#include "../../client/settings/cache_settings.h"
-#include "../board/card_list.h"
 #include "../board/card_state.h"
+#include "client/settings/cache_settings.h"
 
 #include <QtGlobal>
 #include <libcockatrice/settings/interface_settings.h>
