@@ -8,8 +8,8 @@
 #ifndef COCKATRICE_PLAYER_ACTIONS_H
 #define COCKATRICE_PLAYER_ACTIONS_H
 
-#include "../../game_graphics/board/card_item.h" // IWYU pragma: keep - moc instantiates the metatype for QList<CardItem *>, which Qt 6.4 needs complete
 #include "../board/card_list.h"
+#include "../board/card_state.h"
 #include "card_menu_action_type.h"
 #include "card_move_request.h"
 #include "libcockatrice/card/card_info.h"
@@ -23,7 +23,6 @@
 #include <libcockatrice/filters/filter_string.h>
 #include <qtmetamacros.h>
 
-class CardItem;
 class CardRelation;
 class QAction;
 class QTimer;
