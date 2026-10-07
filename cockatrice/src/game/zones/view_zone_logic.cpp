@@ -1,8 +1,8 @@
 #include "view_zone_logic.h"
 
 #include "../../client/settings/cache_settings.h"
-#include "../../game_graphics/board/card_item.h"
 #include "../board/card_list.h"
+#include "../board/card_state.h"
 
 #include <QtGlobal>
 #include <libcockatrice/settings/interface_settings.h>
@@ -75,7 +75,7 @@ bool ZoneViewZoneLogic::prepareAddCard(int x)
  * Make sure prepareAddCard() was called before calling addCard().
  * This method assumes we already checked that the card is being inserted into the visible portion
  */
-void ZoneViewZoneLogic::addCardImpl(CardItem *card, int x, int /*y*/)
+void ZoneViewZoneLogic::addCardImpl(CardState *card, int x, int /*y*/)
 {
     if (!isReversed) {
         // if x is negative set it to add at end
@@ -144,8 +144,8 @@ void ZoneViewZoneLogic::removeCard(int position, bool toNewZone)
         return;
     }
 
-    CardItem *card = cards.takeAt(position);
-    card->getState()->deleteView();
+    CardState *card = cards.takeAt(position);
+    card->deleteView();
 
     // The toNewZone check is to prevent the view from auto-closing if the view contains only a single card and that
     // card gets dragged within the view.
@@ -168,7 +168,7 @@ void ZoneViewZoneLogic::requestClose()
 void ZoneViewZoneLogic::clearCards()
 {
     for (auto card : cards) {
-        card->getState()->deleteView();
+        card->deleteView();
     }
     cards.clear();
     emit cardCountChanged();
