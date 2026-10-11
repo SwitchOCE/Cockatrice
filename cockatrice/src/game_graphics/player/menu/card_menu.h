@@ -10,7 +10,9 @@
 #include <QList>
 #include <QMenu>
 #include <QPair>
+#include <QPointer>
 #include <QString>
+#include <libcockatrice/utility/card_ref.h>
 #include <qtmetamacros.h>
 
 class CardItem;
@@ -53,7 +55,11 @@ public:
 
 private:
     PlayerGraphicsItem *player;
-    CardItem *card;
+    // QPointer so a card deleted while the popup is open (opponent moves it to
+    // another zone -> deleteLater) nulls out instead of dangling. All trigger-time
+    // uses go through PlayerActions null checks or `if (card)`, restoring the
+    // old activeCard-cleared-in-prepareDelete() no-op behavior.
+    QPointer<CardItem> card;
     QList<QPair<QString, int>> playersInfo;
     bool shortcutsActive;
 
