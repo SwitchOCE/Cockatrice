@@ -7,7 +7,6 @@
 #ifndef DLG_CREATETOKEN_H
 #define DLG_CREATETOKEN_H
 
-
 #include <QDialog>
 #include <QList>
 #include <QString>

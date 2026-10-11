@@ -1,7 +1,6 @@
 #ifndef COCKATRICE_REPLAY_MANAGER_H
 #define COCKATRICE_REPLAY_MANAGER_H
 
-
 #include <QList>
 #include <QObject>
 #include <QtGlobal>

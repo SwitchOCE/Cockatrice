@@ -21,6 +21,7 @@ inline Q_LOGGING_CATEGORY(CardZoneLogicLog, "card_zone_logic");
 
 class PlayerLogic;
 class ZoneViewZoneLogic;
+class CardDragItem;
 
 class CardZoneLogic : public QObject
 {

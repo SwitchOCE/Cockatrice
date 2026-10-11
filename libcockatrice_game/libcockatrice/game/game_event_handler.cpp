@@ -57,7 +57,6 @@
 #include <libcockatrice/protocol/pb/game_event_container.pb.h>
 #include <libcockatrice/protocol/pending_command.h>
 #include <libcockatrice/utility/zone_names.h>
-
 #include <string>
 #include <utility>
 

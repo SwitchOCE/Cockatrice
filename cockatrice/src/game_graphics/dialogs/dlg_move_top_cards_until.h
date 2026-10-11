@@ -7,7 +7,6 @@
 #ifndef DLG_MOVE_TOP_CARDS_UNTIL_H
 #define DLG_MOVE_TOP_CARDS_UNTIL_H
 
-
 #include <QDialog>
 #include <QList>
 #include <QString>

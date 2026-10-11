@@ -24,11 +24,6 @@ void PileZoneLogic::addCardImpl(CardState *card, int x, int /*y*/)
         x = cards.size();
     }
     cards.insert(x, card);
-    // Keep cards hidden and at the pile origin in the logic path as well: custom zones created in
-    // PlayerLogic::setupZones have no PileZone graphics item, so PileZone::onCardAdded never runs for them.
-    // For piles with a view this is a harmless duplicate of the view's hide.
-    card->setPos(0, 0);
-    card->setVisible(false);
     if (!contentsKnown()) {
         card->setCardRef({});
         card->setId(-1);

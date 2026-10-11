@@ -17,6 +17,7 @@
 #include <QPoint>
 #include <QPointF>
 #include <QtGlobal>
+#include <libcockatrice/game/zones/table_zone_logic.h>
 #include <qtmetamacros.h>
 
 class CardDragItem;
@@ -25,7 +26,6 @@ class CardZoneLogic;
 class QColor;
 class QGraphicsItem;
 class QPainter;
-class TableZoneLogic;
 template <typename T> class QList;
 
 /**

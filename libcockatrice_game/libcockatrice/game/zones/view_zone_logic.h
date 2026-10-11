@@ -12,6 +12,7 @@
 
 class PlayerLogic;
 class QObject;
+class IInterfaceSettingsProvider;
 
 class ZoneViewZoneLogic : public CardZoneLogic
 {
@@ -26,6 +27,8 @@ private:
     int numberCards;
     bool revealZone, writeableRevealZone;
     bool isReversed;
+    // Borrowed settings provider (owned by the application). Null outside the client, in which case views stay open.
+    IInterfaceSettingsProvider *interfaceSettings;
 
 public:
     enum CardAction
@@ -41,6 +44,7 @@ public:
                       bool _revealZone,
                       bool _writeableRevealZone,
                       bool _isReversed,
+                      IInterfaceSettingsProvider *interfaceSettings = nullptr,
                       QObject *parent = nullptr);
 
     bool prepareAddCard(int x);
@@ -56,6 +60,8 @@ public:
 
     /** @brief Removes all cards from the view, without touching anything else. Used in replay rewind */
     void clearCards();
+
+    [[nodiscard]] bool getCloseEmptyCardView() const;
 
     int getNumberCards() const
     {
